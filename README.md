@@ -34,6 +34,11 @@ Full tutorial
 
 Version 2.0.0 is a major release and is not backward compatible. make sure you update your code accordingly. Thanks to [stefanomorni](https://github.com/stefanomorni) for contributing and removing selenium dependancy.
 
+## About forked version
+
+This project forked from https://github.com/rongardF/tvdatafeed with additional feature:
+- Ability to login with access token
+
 ## Usage
 
 Import the packages and initialize with your tradingview username and password.
@@ -45,6 +50,14 @@ username = 'YourTradingViewUsername'
 password = 'YourTradingViewPassword'
 
 tv = TvDatafeed(username, password)
+```
+
+Or initialize with your tradingview access token
+
+```python
+from tvDatafeed import TvDatafeed, Interval
+
+tv = TvDatafeed(token='eyJ...')
 ```
 
 You may use without logging in, but in some cases tradingview may limit the symbols and some symbols might not be available.
